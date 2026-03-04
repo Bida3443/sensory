@@ -12,6 +12,24 @@ const items = [
     link: ""
   }
 ]
+const sensory = [
+  {
+    texts:"Brought Light",
+    date:"12:30 AM 12/07/2023"
+  },
+  {
+    texts:"Took Light",
+    date:"12:30 AM 12/07/2023"
+  },
+  {
+    texts:"Brought Light",
+    date:"12:30 AM 12/07/2023"
+  },
+  {
+    texts:"Took Light",
+    date:"12:30 AM 12/07/2023"
+  },
+]
 
 export default function Home() {
   return (
@@ -36,9 +54,9 @@ export default function Home() {
 
       <div className="bg-white py-4 px-24 h-screen ">
         <div>
-          <div className="inline-block">
+          <div className="inline-block max-w-full">
             <h1 className="text-black text-8xl">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black w-180">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <p className="text-black max-w-180">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
           <div></div>
         </div>
