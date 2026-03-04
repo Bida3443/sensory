@@ -16,7 +16,7 @@ const items = [
 export default function Home() {
   return (
     <section>
-      <nav className="mx-auto max-h-screen bg-white py-6 px-24">
+      <nav className="mx-auto max-h-screen bg-white border-b border-black py-4 px-24">
         <div className="flex text-black items-center justify-between">
           <div>
             {items.map((items,index)=>(
@@ -27,14 +27,25 @@ export default function Home() {
             ))}
           </div>
           <div>
-            <button className="bg-black text-white p-4 ">Contribute to this Service</button>
+            <button className="bg-black text-white p-4 cursor-pointer ">Contribute to this Service</button>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
 
-      <div>vvvvvvv</div>
+      <div className="bg-white py-4 px-24 h-screen ">
+        <div>
+          <div className="inline-block">
+            <h1 className="text-black text-8xl">Status:<span className="text-yellow-400">ON</span></h1>
+            <p className="text-black w-180">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+          </div>
+          <div></div>
+        </div>
+        <div>
+          <h1>Ligth History</h1>  
+        </div>
+      </div>
     </section>
   );
 }
