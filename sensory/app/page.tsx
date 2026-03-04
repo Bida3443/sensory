@@ -1,4 +1,6 @@
-// import Image from "next/image";
+import Image from "next/image";
+
+import Group from "../../sensory/public/Group.png";
 
 const items = [
   {
@@ -53,15 +55,31 @@ export default function Home() {
       {/* Hero Section */}
 
       <div className="bg-white py-4 px-24 h-screen ">
-        <div>
+        <div className="space-y-4 flex justify-between">
           <div className="inline-block max-w-full">
             <h1 className="text-black text-8xl">Status:<span className="text-yellow-400">ON</span></h1>
             <p className="text-black max-w-180">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
-          <div></div>
+          <div>
+            <Image
+            src={Group}
+            alt=""
+            width={200}
+            height={200}
+            />
+          </div>
         </div>
-        <div>
-          <h1>Ligth History</h1>  
+        <div className="space-y-2">
+          <h1 className="underline text-2xl text-black">Ligth History</h1>  
+          
+          <div className=" space-y-4">
+            {sensory.map((sensory,index)=>(
+              <div key={index}>
+                <div className="text-black">{sensory.texts}</div>
+                <div className="text-black">{sensory.date}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
