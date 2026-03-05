@@ -54,13 +54,31 @@ export default function Home() {
 
       {/* Hero Section */}
 
-      <div className="bg-white py-12 px-24 ">
-        <div className="flex justify-between items-center">
-          <div className=" max-w-xl py-6">
-            <h1 className="text-black text-8xl">Status:<span className="text-yellow-400">ON</span></h1>
+      <div className="bg-white py-12 px-24 relative ">
+        <div className="flex justify-between items-center py-0">
+          <div className="flex flex-col">
+            <div className=" max-w-xl py-6">
+            <h1 className="text-black text-8xl font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
             <p className="text-black max-w-xl">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
-          {/*  */} <div className="py-0 p-0">
+
+          <div className="">
+          <h1 className="underline text-2xl text-black mb-4">Ligth History</h1>  
+          
+          <div className="space-y-2">
+            {sensory.map((sensory,index)=>(
+              <div key={index}>
+                <div className="text-black">{sensory.texts}</div>
+                <div className="text-black text-sm">{sensory.date}</div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+          </div>
+
+          {/*  */} 
+          <div className="absolute right-24 top-0">
             <Image
             src={Group}
             alt=""
@@ -68,22 +86,8 @@ export default function Home() {
             height={600}
             />
           </div>
-
-        </div>
-        <div className="">
-          <h1 className="underline text-2xl text-black">Ligth History</h1>  
-          
-          <div className="">
-            {sensory.map((sensory,index)=>(
-              <div key={index}>
-                <div className="text-black">{sensory.texts}</div>
-                <div className="text-black">{sensory.date}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
-
       
     </section>
   );
