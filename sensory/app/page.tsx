@@ -54,25 +54,26 @@ export default function Home() {
 
       {/* Hero Section */}
 
-      <div className="bg-white py-4 px-24 h-screen ">
-        <div className="space-y-4 flex justify-between">
-          <div className="inline-block max-w-full">
+      <div className="bg-white py-12 px-24 ">
+        <div className="flex justify-between items-center">
+          <div className=" max-w-xl py-6">
             <h1 className="text-black text-8xl">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black max-w-180">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <p className="text-black max-w-xl">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
-          <div>
+          {/*  */} <div className="py-0 p-0">
             <Image
             src={Group}
             alt=""
-            width={200}
-            height={200}
+            width={300}
+            height={600}
             />
           </div>
+
         </div>
-        <div className="space-y-2">
+        <div className="">
           <h1 className="underline text-2xl text-black">Ligth History</h1>  
           
-          <div className=" space-y-4">
+          <div className="">
             {sensory.map((sensory,index)=>(
               <div key={index}>
                 <div className="text-black">{sensory.texts}</div>
@@ -82,6 +83,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      
     </section>
   );
 }
