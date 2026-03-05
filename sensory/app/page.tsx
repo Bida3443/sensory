@@ -54,16 +54,17 @@ export default function Home() {
 
       {/* Hero Section */}
 
-      <div className="bg-white py-12 px-24 relative ">
-        <div className="flex justify-between items-center py-0">
-          <div className="flex flex-col">
+      <div className="bg-white py-12 px-24  lg:h-screen  ">
+        
+          <div className="flex  lg:flex-row flex-col  justify-between items-center">
+          <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6">
             <h1 className="text-black text-8xl font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black max-w-xl">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <p className="text-black text-justify max-w-2xl">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
           <div className="">
-          <h1 className="underline text-2xl text-black mb-4">Ligth History</h1>  
+          <h1 className="underline text-2xl text-black ">Ligth History</h1>  
           
           <div className="space-y-2">
             {sensory.map((sensory,index)=>(
@@ -78,7 +79,7 @@ export default function Home() {
           </div>
 
           {/*  */} 
-          <div className="absolute right-24 top-0">
+          <div className=" order-1 lg:order-2 right-24 top-0">
             <Image
             src={Group}
             alt=""
@@ -86,6 +87,16 @@ export default function Home() {
             height={600}
             />
           </div>
+        </div>
+        </div>
+      
+
+            {/* Footer Section */}
+      <div className="text-black bg-white flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black py-6 px-24">
+        <p>© 2023 Sensory. All Rights Reserved.</p>
+        <div className="flex lg:flex-row flex-col lg:gap-10 items-center">
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
         </div>
       </div>
       
