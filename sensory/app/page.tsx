@@ -1,4 +1,8 @@
+"use client"
+
 import Image from "next/image";
+
+import React, {useState} from "react";
 
 import Group from "../../sensory/public/Group.png";
 
@@ -13,7 +17,7 @@ const items = [
     text: "Sensory",
     link: ""
   }
-]
+] 
 const sensory = [
   {
     texts:"Brought Light",
@@ -33,7 +37,18 @@ const sensory = [
   },
 ]
 
+
 export default function Home() {
+
+  const [IsOpen, setIsOpen] = useState(false);
+
+  const toggleMenu =() => {
+
+    setIsOpen(!IsOpen);
+
+  }
+
+
   return (
     <section>
       <nav className="mx-auto max-h-screen bg-white border-b border-black py-4 px-24">
@@ -46,30 +61,41 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div>
-            <button className="bg-black text-white p-4 cursor-pointer ">Contribute to this Service</button>
+
+          <div className="lg:hidden">
+            <button onClick={toggleMenu} 
+            className="bg-black text-white p-4 cursor-pointer "> Contribute to this Service
+              <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 448 512"
+              className="h-7 w-7 stroke-black">
+              <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+  
+
+            </button>
           </div>
+
         </div>
       </nav>
 
       {/* Hero Section */}
 
-      <div className="bg-white py-12 px-24  lg:h-screen  ">
+      <div className="bg-white pb-5 px-24  lg:h-screen  ">
         
-          <div className="flex  lg:flex-row flex-col  justify-between items-center">
+          <div className="flex lg:flex-row flex-col justify-between  items-center">
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
-            <div className=" max-w-xl py-6">
-            <h1 className="text-black text-8xl font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black text-justify max-w-2xl">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <div className=" max-w-xl py-6 ">
+            <h1 className="text-black lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
+            <p className="text-black lg:text-justify max-w-2xl lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
-          <div className="">
+          <div className=" flex flex-col lg:text-start text-center  ">
           <h1 className="underline text-2xl text-black ">Ligth History</h1>  
           
           <div className="space-y-2">
             {sensory.map((sensory,index)=>(
               <div key={index}>
-                <div className="text-black">{sensory.texts}</div>
+                <div className="text-black font-bold">{sensory.texts}</div>
                 <div className="text-black text-sm">{sensory.date}</div>
               </div>
             ))}
@@ -90,11 +116,10 @@ export default function Home() {
         </div>
         </div>
       
-
             {/* Footer Section */}
-      <div className="text-black bg-white flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black py-6 px-24">
-        <p>© 2023 Sensory. All Rights Reserved.</p>
-        <div className="flex lg:flex-row flex-col lg:gap-10 items-center">
+      <div className="text-black gap-6 bg-white flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black py-6 px-24 ">
+        <p className="lg:order-1 order-2">© 2023 Sensory. All Rights Reserved.</p>
+        <div className="flex lg:flex-row flex-col gap-6 items-center lg:order-2 order-1">
           <p>Privacy Policy</p>
           <p>Terms & Conditions</p>
         </div>
