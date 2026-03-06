@@ -40,25 +40,25 @@ const sensory = [
 
 export default function Home() {
 
-  const [IsOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu =() => {
 
-    setIsOpen(!IsOpen);
+    setIsOpen(!isOpen);
 
   }
 
-
+ 
   return (
     <section>
-      <nav className="mx-auto max-h-screen bg-white border-b border-black py-4 px-24">
+      {/* <nav className="mx-auto max-h-screen bg-white border-b border-black py-4 px-24">
         <div className="flex text-black items-center justify-between">
           <div>
             {items.map((items,index)=>(
               <div key={index} className="flex gap-2 items-center text-black">
                 <div>{items.svg}</div>
                 <div>{items.text}</div>
-              </div>
+              </div> 
             ))}
           </div>
 
@@ -69,19 +69,63 @@ export default function Home() {
           </div>
 
           <div className="lg:hidden">
-            <button onClick={toggleMenu} 
+            <button 
+            onClick={toggleMenu} 
             className="bg-black text-white p-4 cursor-pointer "> Contribute to this Service
-              <svg 
+            <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 448 512"
               className="h-7 w-7 stroke-black">
               <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-  
             </button>
           </div>
 
         </div>
-      </nav>
+      </nav> */}
+
+<nav className="mx-auto max-h-screen bg-white border-b border-black py-4 px-24">
+  <div className="flex text-black items-center justify-between">
+
+    {/* Logo */}
+    <div>
+      {items.map((items,index)=>(
+        <div key={index} className="flex gap-2 items-center text-black">
+          <div>{items.svg}</div>
+          <div>{items.text}</div>
+        </div>
+      ))}
+    </div>
+
+
+    {/* Desktop Button */}
+    <div className="hidden lg:block">
+      <button className="bg-black text-white px-6 py-3">
+        Contribute to this Service
+      </button>
+    </div>
+
+
+    {/* Mobile Hamburger */}
+    <div className="lg:hidden"> 
+      <button 
+        onClick={toggleMenu}
+        className="cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          className="h-7 w-7 fill-black"
+        >
+          <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+
+
 
       {/* Hero Section */}
 
