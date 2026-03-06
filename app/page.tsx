@@ -141,6 +141,7 @@ export default function Home() {
         <div className="flex lg:flex-row flex-col gap-6 items-center lg:order-2 order-1">
           <p>Privacy Policy</p>
           <p>Terms & Conditions</p>
+          <p>Terms & Conditions</p>
         </div>
       </div>
       
