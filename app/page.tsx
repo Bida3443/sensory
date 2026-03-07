@@ -67,7 +67,7 @@ export default function Home() {
                   <Button variant="secondary">Button 2</Button>
                 </div> */}
                 <ThemeToggle/>
-                <ThemeToggle/>
+                
               </div> 
             ))}
           </div>
