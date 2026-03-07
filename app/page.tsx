@@ -1,13 +1,12 @@
 "use client"
-
-import Image from "next/image";
+import Image from "next/image"
 
 
 import {useState} from "react"; 
 
-import Group from "../public/Group.png";
+import Group from "../../sensory/public/Group.png"
 // import { Button } from "@/components/ui/button";
-import ThemeToggle from "./theme-toggle";
+import ThemeToggle from "./theme-toggle"
 
 const items = [
   {
