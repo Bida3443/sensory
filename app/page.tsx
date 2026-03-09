@@ -4,7 +4,7 @@ import Image from "next/image"
 
 import {useState} from "react"; 
 
-import Group from "../../sensory/public/Group.png"
+import Group from "../public/Group.png"
 // import { Button } from "@/components/ui/button";
 import ThemeToggle from "./theme-toggle"
 
