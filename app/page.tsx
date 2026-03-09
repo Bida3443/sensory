@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6 ">
             <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black dark:text-white lg:text-justify max-w-2xl  lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:text-[20px] text-[15px]   lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
           <div className=" flex flex-col lg:text-start text-center  ">
