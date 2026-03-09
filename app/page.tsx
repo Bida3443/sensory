@@ -4,7 +4,7 @@ import Image from "next/image"
 
 import {useState} from "react"; 
 
-import Group from "../public/Group.png"
+// import Group from "../public/Group.png"
 // import { Button } from "@/components/ui/button";
 import ThemeToggle from "./theme-toggle"
 
@@ -126,7 +126,7 @@ export default function Home() {
           {/*  */} 
           <div className=" order-1 lg:order-2 right-24 top-0">
             <Image
-            src={Group}
+            src="/Group.png"
             alt=""
             width={300}
             height={600}
