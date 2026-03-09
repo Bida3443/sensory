@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <section>
 
-      <nav className="max-h-screen lg:space-x-3 bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white lg:py-4 py-2 lg:px-24 px-15">
+      <nav className="max-h-screen lg:space-x-3 bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white lg:py-4 py-2 lg:px-24 px-2">
         <div className="flex text-black dark:text-white transition-all duration-300 items-center justify-between">
           <div>
             {items.map((items,index)=>(
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6 ">
             <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
-            <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <p className="text-black dark:text-white lg:text-justify max-w-2xl  lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
           <div className=" flex flex-col lg:text-start text-center  ">
@@ -136,9 +136,9 @@ export default function Home() {
         </div>
       
             {/* Footer Section */}
-      <div className="text-black dark:text-white lg:gap-6 gap-3 bg-white dark:bg-black flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black dark:border-white lg:py-6 py-3 lg:px-24 px-10 ">
+      <div className="text-black dark:text-white lg:gap-6 gap-1 bg-white dark:bg-black flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black dark:border-white lg:py-6 py-3 lg:px-24 px-10 ">
         <p className="lg:order-1 order-2">© 2023 Sensory. All Rights Reserved.</p>
-        <div className="flex lg:flex-row flex-col lg:gap-6 gap-3 items-center lg:order-2 order-1">
+        <div className="flex lg:flex-row flex-col lg:gap-6 gap-1 items-center lg:order-2 order-1">
           <p>Privacy Policy</p>
           <p>Terms & Conditions</p>
           
