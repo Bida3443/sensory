@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <section>
 
-      <nav className="mx-auto max-h-screen bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white py-4 px-24">
+      <nav className="max-h-screen lg:space-x-3 bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white py-4 px-24">
         <div className="flex text-black dark:text-white transition-all duration-300 items-center justify-between">
           <div>
             {items.map((items,index)=>(
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       
             {/* Footer Section */}
-      <div className="text-black dark:text-white gap-6 bg-white dark:bg-black flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black dark:border-white py-6 px-24 ">
+      <div className="text-black dark:text-white gap-6 bg-white dark:bg-black flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black dark:border-white lg:py-6 py-3 lg:px-24 px-10 ">
         <p className="lg:order-1 order-2">© 2023 Sensory. All Rights Reserved.</p>
         <div className="flex lg:flex-row flex-col gap-6 items-center lg:order-2 order-1">
           <p>Privacy Policy</p>
