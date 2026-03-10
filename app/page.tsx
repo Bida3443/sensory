@@ -2,6 +2,8 @@
 import Image from "next/image"
 
 
+
+
 import {useState} from "react"; 
 
 // import Group from "../public/Group.png"
@@ -62,10 +64,6 @@ export default function Home() {
                 <div>{items.svg}</div>
                 
                 <div>{items.text}</div>
-                {/* <div>
-                  <Button>Button 1</Button>
-                  <Button variant="secondary">Button 2</Button>
-                </div> */}
                 
                 
               </div> 
@@ -83,7 +81,7 @@ export default function Home() {
           <div className="lg:hidden">
             <button 
             onClick={toggleMenu} 
-            className= "cursor-pointer "
+            className= "cursor-pointer " 
             > 
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -94,6 +92,13 @@ export default function Home() {
               </svg>
             </button>
           </div>
+        {/* mobile Hamburger */}
+{isOpen &&(
+<div></div>
+
+)}
+
+          
 
         </div>
       </nav>
@@ -106,7 +111,7 @@ export default function Home() {
           <div className="flex lg:flex-row flex-col justify-between  items-center">
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6 ">
-            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-light tracking-tight">Status:<span className="text-yellow-400">ON </span></h1>
+            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-light tracking-tight">Status:<span className="text-yellow-400 ">ON </span></h1>
             <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:text-[18px] text-[13px]   lg:justify-start font-light text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
@@ -139,8 +144,8 @@ export default function Home() {
       
             {/* Footer Section */}
       <div className="text-black dark:text-white lg:gap-6 gap-1 bg-white dark:bg-black flex lg:flex-row flex-col justify-center lg:justify-between border-t items-center border-black dark:border-white lg:py-6 py-3 lg:px-24 px-10 ">
-        <p className="lg:order-1 order-2">© 2023 Sensory. All Rights Reserved.</p>
-        <div className="flex lg:flex-row flex-col lg:gap-6 gap-1 items-center lg:order-2 order-1">
+        <p className="lg:order-1 lg:text-[15px] text-[10px] order-2">© 2023 Sensory. All Rights Reserved.</p>
+        <div className="flex lg:flex-row flex-col lg:text-[15px] text-[10px] lg:gap-6 gap-1 items-center lg:order-2 order-1">
           <p>Privacy Policy</p>
           <p>Terms & Conditions</p>
           
