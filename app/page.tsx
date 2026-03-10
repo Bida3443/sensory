@@ -52,26 +52,28 @@ export default function Home() {
 
  
   return (
-    <section>
+    <section className="">
 
-      <nav className="max-h-screen lg:space-x-3 bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white lg:py-4 py-2 lg:px-24 px-2">
+      <nav className="max-h-screen sticky top-0 lg:space-x-3 bg-white dark:bg-black border-b transition-all duration-300 border-black dark:border-white lg:py-4 py-2 lg:px-24 px-2">
         <div className="flex text-black dark:text-white transition-all duration-300 items-center justify-between">
           <div>
             {items.map((items,index)=>(
               <div key={index} className="flex gap-2 items-center dark:text-white text-black">
                 <div>{items.svg}</div>
                 
-                <div>{items.text}</div>
+                <div className="font:Tektur, sans-serif">{items.text}</div>
                 {/* <div>
                   <Button>Button 1</Button>
                   <Button variant="secondary">Button 2</Button>
                 </div> */}
-                <ThemeToggle/>
+                
                 
               </div> 
+              
             ))}
           </div>
-
+          <ThemeToggle/>
+  
           <div className="hidden lg:block">
         <button className="bg-black dark:bg-white text-white dark:text-black px-6 py-3">
         Contribute to this Service
@@ -104,7 +106,7 @@ export default function Home() {
           <div className="flex lg:flex-row flex-col justify-between  items-center">
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6 ">
-            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON</span></h1>
+            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON </span></h1>
             <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:text-[20px] text-[15px]   lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 

@@ -3,10 +3,19 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
+import { Tektur } from "next/font/google";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+
+const tektur = Tektur({
+  subsets: ["latin"],
+});
+
+
 
 // const geistMono = Geist_Mono({
 //   variable: "--font-geist-mono",
@@ -27,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} antialiased`}
+        className={`${tektur.className} antialiased`} 
       >
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           {children}
