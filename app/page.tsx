@@ -61,7 +61,7 @@ export default function Home() {
               <div key={index} className="flex gap-2 items-center dark:text-white text-black">
                 <div>{items.svg}</div>
                 
-                <div className="font:Tektur, sans-serif">{items.text}</div>
+                <div>{items.text}</div>
                 {/* <div>
                   <Button>Button 1</Button>
                   <Button variant="secondary">Button 2</Button>
@@ -75,7 +75,7 @@ export default function Home() {
           <ThemeToggle/>
   
           <div className="hidden lg:block">
-        <button className="bg-black dark:bg-white text-white dark:text-black px-6 py-3">
+        <button className="bg-black dark:bg-white dark:hover:bg-amber-300 dark:hover:text-white transition hover:bg-amber-300 hover:text-black  cursor-pointer text-white dark:text-black px-6 py-3">
         Contribute to this Service
         </button>
           </div>
@@ -106,8 +106,8 @@ export default function Home() {
           <div className="flex lg:flex-row flex-col justify-between  items-center">
           <div className="flex flex-col order-2 lg:order-1 lg:justify-center lg:items-start items-center">
             <div className=" max-w-xl py-6 ">
-            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-semibold tracking-tight">Status:<span className="text-yellow-400">ON </span></h1>
-            <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:text-[20px] text-[15px]   lg:justify-start text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
+            <h1 className="text-black dark:text-white lg:text-8xl text-6xl lg:justify-start lg:text-start text-center justify-center font-light tracking-tight">Status:<span className="text-yellow-400">ON </span></h1>
+            <p className="text-black dark:text-white lg:text-justify max-w-2xl lg:text-[18px] text-[13px]   lg:justify-start font-light text-center justify-center ">NB: The light status information provided on this website is intended for reference purposes only. While we strive to offer accurate and up-to-date data, we cannot guarantee its absolute precision.</p>
           </div>
 
           <div className=" flex flex-col lg:text-start text-center  ">
