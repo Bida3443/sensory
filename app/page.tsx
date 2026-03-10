@@ -79,26 +79,85 @@ export default function Home() {
           </div>
 
           <div className="lg:hidden">
-            <button 
+            {/* <button 
             onClick={toggleMenu} 
             className= "cursor-pointer " 
             > 
-            <svg 
+            {isOpen ? (
+              <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 448 512"
               className="h-7 w-7 fill-black  dark:fill-white"
               >
-              <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+              <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              
+              />
               </svg>
-            </button>
+            ):(
+                <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 384 512"
+        className="h-7 w-7 fill-black  dark:fill-white"
+        ><path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/>
+        </svg>
+            )
+          }
+            </button> */}
+
+
+             <button onClick={toggleMenu} className="cursor-pointer">
+
+    {isOpen ? (
+
+      /* X ICON */
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+        className="h-7 w-7 fill-black dark:fill-white"
+      >
+        <path d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s-12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"/>
+      </svg>
+
+    ) : (
+
+      /* HAMBURGER */
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+        className="h-7 w-7 fill-black dark:fill-white"
+      >
+        <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+      </svg>
+
+    )}
+
+  </button>
           </div>
+
+
         {/* mobile Hamburger */}
-{isOpen &&(
-<div></div>
+{/* {isOpen &&( */}
+{/* <div className="lg:hidden">
+  <button className="bg-black dark:bg-white dark:hover:bg-amber-300 dark:hover:text-white transition hover:bg-amber-300 hover:text-black  cursor-pointer text-white dark:text-black px-6 py-3">
+        Contribute to this Service
+        </button>
+// </div> */}
+{/* )}     */}
 
-)}
 
-          
+<div
+  className={`lg:hidden fixed top-0 left-0 h-full w-64 bg-white dark:bg-black border-r border-black dark:border-white
+  transform transition-transform duration-300 ease-in-out
+  ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+>
+
+  <div className="p-6 mt-16">
+    <button className="bg-black dark:bg-white text-white dark:text-black px-6 py-3 w-full">
+      Contribute to this Service
+    </button>
+  </div>
+
+</div>
 
         </div>
       </nav>
