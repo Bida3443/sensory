@@ -123,6 +123,8 @@ export default function Home() {
   <div className="p-6 mt-16">
     <button className="bg-black dark:bg-white hover:bg-amber-300 cursor-pointer dark:hover:bg-amber-300 text-white dark:text-black px-6 py-3 w-full">
       Contribute to this Service
+      Contribute to this Service
+      Contribute to this Service
     </button>
   </div>
 
