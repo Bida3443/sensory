@@ -72,9 +72,7 @@ export default function Home() {
           <div className="hidden lg:block">
         <button className="bg-black dark:bg-white dark:hover:bg-amber-300 dark:hover:text-white transition hover:bg-amber-300 hover:text-black  cursor-pointer text-white dark:text-black px-6 py-3">
         Contribute to this Service
-        Contribute to this Service
-        Contribute to this Service
-        Contribute to this Service
+        
         
 
         
