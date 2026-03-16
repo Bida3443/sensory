@@ -74,9 +74,6 @@ export default function Home() {
         Contribute to this Service
         
         
-
-        
-        
         </button>
           </div>
 
